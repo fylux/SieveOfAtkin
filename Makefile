@@ -1,13 +1,11 @@
-#-D__NO_INLINE__ to avoid a Mingw bug
-
-a.exe: main.o Atkin.o
-	gcc -o a.exe main.o Atkin.o -lstdc++ -std=c++11 -O3 -D__NO_INLINE__ 
+a.out : main.o Atkin.o
+	g++ -o a.out main.o Atkin.o -std=c++11 -O2
 
 main.o : main.cpp Atkin.hpp
-	gcc -c main.cpp -lstdc++ -std=c++11 -O3 -D__NO_INLINE__ 
+	g++ -c main.cpp -std=c++11 -O2
 
 Atkin.o : Atkin.cpp Atkin.hpp
-	gcc -c Atkin.cpp -lstdc++ -std=c++11 -O3 -D__NO_INLINE__ 
+	g++ -c Atkin.cpp - -std=c++11 -O2
 
-run: a.exe
-	a.exe
+run : a.out
+	./a.out
