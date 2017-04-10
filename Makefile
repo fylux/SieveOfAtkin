@@ -5,7 +5,7 @@ main.o : main.cpp Atkin.hpp
 	g++ -c main.cpp -std=c++11 -O2
 
 Atkin.o : Atkin.cpp Atkin.hpp
-	g++ -c Atkin.cpp - -std=c++11 -O2
+	g++ -c Atkin.cpp -std=c++11 -O2
 
 run : a.out
 	./a.out
